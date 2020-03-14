@@ -264,7 +264,7 @@ while($show = mysqli_fetch_array($showdate)){
         
 	    <?php
 	}
-	else
+	elseif (($_SESSION['username'] == $result['student_id']) AND ($result['available'] == 2))
 	{
         ?>
         
