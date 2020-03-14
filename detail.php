@@ -29,21 +29,23 @@ if($_SESSION['username'] == "")
 <html>
 <head>
 	<title>Information</title>
-	<style> body { background-image: url("resource/bg.jpg");background-attachment: fixed;}</style>
 </head>
 <body>
-<div>
-
-ใบยืนยันการจองห้องเรียน (รหัสการจอง <?=$rentid;?>)<br>
-
-นาย <?=$stufname." ".$stulname;?> รหัสนักศึกษา <?=$stuid;?><br>
-
-ได้ทำการจองห้องเรียน  <?=$room;?>  วัน   <?=$date;?>  เวลา <?=$time;?><br>
-
-ด้วยเหตุผล <?=$reason;?><br>
-
-โดยมี อาจารย์ที่ปรึกษาเป็น <?=$advice;?><br>
-
+<br><br>
+<div align=center>
+<div>ใบยืนยันการจองห้องเรียน (รหัสการจอง<?=$rentid;?>)</div>
+<div>นาย <?=$stufname." ".$stulname;?> รหัสนักศึกษา <?=$stuid;?></div>
+<div>ได้ทำการจองห้องเรียน  <?=$room;?>  วัน   <?=$date;?>  เวลา <?=$time;?></div>
+<div>ด้วยเหตุผล <?=$reason;?></div>
+<div>โดยมี อาจารย์ที่ปรึกษาเป็น <?=$advice;?></div><br>
+<button onclick="myFunction()">Print</button>
+<a href="timeselector.php?selroom=<?=$room?>"><button>back</button></a>
 </div>
+
+<script>
+function myFunction() {
+  window.print();
+}
+</script>
 </body>
 </html>
